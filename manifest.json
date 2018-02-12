@@ -1,0 +1,25 @@
+{
+    "name":             "adscrusher",
+    "version":          "1.0",
+    "description":      "no advertising",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_title": "广告粉碎机",
+        "default_icon":  "nopic.png"
+    },
+    "icons": { "128": "nopic.png" },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*.csdn.net/*"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["backend.js"] 
+    }
+}
