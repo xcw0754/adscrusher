@@ -42,10 +42,3 @@ var removeElements = function(sth2remove, sender, sendResponse) {
 
 
 chrome.extension.onMessage.addListener(removeElements);
-
-/*
-// print
-var removeElements = function(messages, sender, sendResponse) {
-    console.log('message coming：' + messages);
-};
-*/

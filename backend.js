@@ -32,7 +32,8 @@ var regExpMatch = function(url, pattern) {
 }
 
 var updateHandle = function(tabId, changeInfo, tab) {
-    // if(changeInfo.status!='complete') return;
+    if(changeInfo.status!='complete'
+        && changeInfo.status!='loading') return;
     for(var key in div) {
         if(regExpMatch(tab.url, div[key][0])) {
             chrome.tabs.sendMessage(
